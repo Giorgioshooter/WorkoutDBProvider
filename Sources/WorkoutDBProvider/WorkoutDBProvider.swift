@@ -1,3 +1,4 @@
 struct WorkoutDBProvider {
-    var text = "Hello, World!"
+    var text = "Your Workout Database provider"
+    var serviceLocator = ServiceLocator(entitiesRepo: EntityRepoMemory())
 }
