@@ -16,7 +16,7 @@ import Foundation
  * @param exerciseId
  * @param metricUnit
  */
-public struct SetEntity:Hashable {
+public struct SetEntity:Hashable, Identifiable {
     public let id: String
     public let weight: Double
     public let repetitions: Int16

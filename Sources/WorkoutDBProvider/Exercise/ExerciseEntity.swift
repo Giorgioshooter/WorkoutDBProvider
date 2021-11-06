@@ -5,7 +5,7 @@
 
 import Foundation
 
-public struct ExerciseEntity: Hashable {
+public struct ExerciseEntity: Hashable, Identifiable {
     public let id: String
     public let name: String
     public let note: String
