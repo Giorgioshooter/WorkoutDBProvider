@@ -8,7 +8,6 @@ import Foundation
 class EntityRepoMemory: EntitiesRepo {
 
     var sets: [String: SetEntity] = [:]
-
     var exercises: [String: ExerciseEntity] = [:]
     var workouts: [String: WorkoutEntity] = [:]
 

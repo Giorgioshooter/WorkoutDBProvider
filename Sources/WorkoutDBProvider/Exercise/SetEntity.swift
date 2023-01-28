@@ -25,7 +25,13 @@ public struct SetEntity:Hashable, Identifiable {
     public let metricUnit: String
     public let creationDate: Date
     
-    public init(id: String, weight: Double, repetitions: Int16, isWorkingSet: Bool, exerciseId: String, metricUnit: String, creationDate: Date) {
+    public init(id: String,
+                weight: Double,
+                repetitions: Int16,
+                isWorkingSet: Bool,
+                exerciseId: String,
+                metricUnit: String,
+                creationDate: Date) {
         self.id = id
         self.weight = weight
         self.repetitions = repetitions

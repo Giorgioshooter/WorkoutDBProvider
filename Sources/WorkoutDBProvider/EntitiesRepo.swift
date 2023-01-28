@@ -5,7 +5,7 @@
 
 import Foundation
 
-protocol EntitiesRepo {
+public protocol EntitiesRepo {
 
     func fetchWorkouts() throws -> [WorkoutEntity]
 
