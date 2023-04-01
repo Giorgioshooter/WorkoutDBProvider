@@ -17,9 +17,7 @@ class GetExerciseByIdUseCaseUnitTests: XCTestCase {
     
     override func setUp() {
         do {
-            try entitiesRepo.updateExercise(exerciseEntity: ExerciseEntity(
-                id: "1", name: "name", note: "note", workoutId: "1"
-            ))
+            try entitiesRepo.updateExercise(exerciseEntity: getTestExerciseEntity())
         } catch {
             
         }

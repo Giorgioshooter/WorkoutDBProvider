@@ -8,12 +8,13 @@
 
 public class CreateExerciseUseCase: UseCase {
 
-    public func create(with name: String, workoutId: String) throws {
+    public func create(with name: String, workoutId: String, weightsIncluded:Bool = true) throws {
         let exercise = ExerciseEntity(
                 id: "",
                 name: name,
                 note: "",
-                workoutId: workoutId
+                workoutId: workoutId,
+                weightsIncluded: weightsIncluded
         )
         try entitiesRepo.addExercise(exerciseEntity: exercise)
     }

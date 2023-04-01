@@ -24,9 +24,7 @@ class UpdateExerciseUseCaseUnitTests: XCTestCase {
     
     func test_updateExercise_adds_an_exercise() throws {
         // Given.
-        let exercise =  ExerciseEntity(
-            id: "1", name: "name", note: "note", workoutId: "1"
-        )
+        let exercise =  getTestExerciseEntity()
         // When.
         try updateExerciseUseCase.update(exercise: exercise)
         
@@ -38,11 +36,11 @@ class UpdateExerciseUseCaseUnitTests: XCTestCase {
     func test_updateExercise_updates_a_given_exercise() throws {
         // Given.
         let exercise =  ExerciseEntity(
-            id: "1", name: "name", note: "note", workoutId: "1"
+            id: "1", name: "name", note: "note", workoutId: "1", weightsIncluded: true
         )
         try updateExerciseUseCase.update(exercise: exercise)
         let exercise2 =  ExerciseEntity(
-            id: "1", name: "name2", note: "note2", workoutId: "1"
+            id: "1", name: "name2", note: "note2", workoutId: "1", weightsIncluded: true
         )
         
         // When.

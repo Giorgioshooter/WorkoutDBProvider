@@ -10,11 +10,13 @@ public struct ExerciseEntity: Hashable, Identifiable {
     public let name: String
     public let note: String
     public let workoutId: String
+    public let weightsIncluded: Bool
     
-    public init(id: String,name: String,note: String,workoutId: String) {
+    public init(id: String,name: String,note: String,workoutId: String, weightsIncluded: Bool) {
         self.id = id
         self.name = name
         self.note = note
         self.workoutId = workoutId
+        self.weightsIncluded = weightsIncluded;
     }
 }
