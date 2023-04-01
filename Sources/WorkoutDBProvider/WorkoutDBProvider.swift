@@ -14,58 +14,58 @@ public struct WorkoutDBProvider {
     ///
     /// Returns a List of workouts
     ///
-    func getWorkouts() throws -> [WorkoutEntity] {
+    public func getWorkouts() throws -> [WorkoutEntity] {
         return try serviceLocator.getWorkoutUseCase.getWorkouts()
     }
     
-    func getWorkout(withId workoutId:String) throws -> WorkoutEntity {
+    public func getWorkout(withId workoutId:String) throws -> WorkoutEntity {
         return try serviceLocator.getWorkoutByIdUseCase.getWorkout(id: workoutId)
     }
     
-    func createWorkout(with workout:WorkoutEntity) throws {
+    public func createWorkout(with workout:WorkoutEntity) throws {
         try serviceLocator.updateWorkoutUseCase.addWorkout(workout: workout)
     }
     
-    func updateWorkout(with workout:WorkoutEntity) throws {
+    public func updateWorkout(with workout:WorkoutEntity) throws {
         try serviceLocator.updateWorkoutUseCase.updateWorkout(workout: workout)
     }
     
     
-    func getExercises(fromWorkoutId workoutId: String) throws -> [ExerciseEntity] {
+    public func getExercises(fromWorkoutId workoutId: String) throws -> [ExerciseEntity] {
         return try serviceLocator.getExercisesUseCase.getExercise(workoutId: workoutId)
     }
     
-    func updateExercise(with exercise:ExerciseEntity) throws {
+    public func updateExercise(with exercise:ExerciseEntity) throws {
         try serviceLocator.updateExerciseUseCase.update(exercise: exercise)
     }
     
-    func createExercise(with name:String, workoutId: String, weightsIncluded: Bool = true) throws{
+    public func createExercise(with name:String, workoutId: String, weightsIncluded: Bool = true) throws{
         try serviceLocator.createExerciseUseCase.create(with: name,
                                                         workoutId: workoutId,
                                                         weightsIncluded: weightsIncluded)
     }
     
-    func getExercise(withId exerciseId:String) throws -> ExerciseEntity {
+    public func getExercise(withId exerciseId:String) throws -> ExerciseEntity {
         return try serviceLocator.getExerciseByIdUseCase.getExercise(exerciseId: exerciseId)
     }
     
-    func addSet(with set:SetEntity) throws {
+    public func addSet(with set:SetEntity) throws {
         try serviceLocator.addSetUseCase.addSet(setEntity: set)
     }
     
-    func getSets(withExerciseId exerciseId: String) throws -> [SetEntity] {
+    public func getSets(withExerciseId exerciseId: String) throws -> [SetEntity] {
         return try serviceLocator.getSetsUseCase.getSets(exerciseId: exerciseId)
     }
     
-    func removeWorkout(withId id: String)  {
+    public func removeWorkout(withId id: String)  {
         serviceLocator.removeWorkoutUseCase.removeWorkout(id: id)
     }
     
-    func removeExercise(withId id: String) throws {
+    public func removeExercise(withId id: String) throws {
         try serviceLocator.removeExerciseUseCase.removeExercise(id: id)
     }
     
-    func removeSet(withId id:String) throws {
+    public func removeSet(withId id:String) throws {
         serviceLocator.removeSetUseCase.removeSet(id: id)
     }
     
