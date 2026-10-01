@@ -7,10 +7,13 @@ public struct WorkoutDBProvider {
     public var text = "Your Workout Database provider"
     private let serviceLocator: ServiceLocator
     
-    public init() {
-        self.serviceLocator = ServiceLocator(entitiesRepo: RealmEntityRepo())
+    /// Opens (or creates) the SQLite database at `path`;
+    /// defaults to `workouts.sqlite` in the documents directory.
+    public init(path: String? = nil) throws {
+        let repo = try path.map { try SQLiteEntityRepo(path: $0) } ?? SQLiteEntityRepo()
+        self.serviceLocator = ServiceLocator(entitiesRepo: repo)
     }
-    
+
     ///
     /// Returns a List of workouts
     ///
