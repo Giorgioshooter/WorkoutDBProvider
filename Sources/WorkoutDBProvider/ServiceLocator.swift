@@ -32,7 +32,6 @@ public class ServiceLocator {
         getSetsUseCase = GetSetsUseCase(entitiesRepo: entitiesRepo)
         removeWorkoutUseCase = RemoveWorkoutUseCase(entitiesRepo: entitiesRepo)
         removeExerciseUseCase = RemoveExerciseUseCase(entitiesRepo: entitiesRepo)
-        
         removeSetUseCase = RemoveSetUseCase(entitiesRepo: entitiesRepo)
     }
 }

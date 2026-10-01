@@ -20,5 +20,7 @@ enum EntitiesRepoError: Error {
     errorOnWorkoutAddition,
     errorOnExerciseRemove,
     errorOnWorkoutRemove,
-    errorOnAddSet
+    errorOnAddSet,
+    errorOnDatabaseOpen,
+    databaseError(String)
 }
